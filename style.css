@@ -1,0 +1,650 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: black;
+}
+.wrapper {
+  max-width: 1280px;
+  height: 2466px;
+  margin: 0 auto;
+  background: white;
+}
+@font-face {
+  font-family: "SegoeWP";
+  src: url("fonts/Segoe_WP_Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MrsEaves";
+  src: url("fonts/MrsEaves.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Univers"
+  src: url("fonts/Univers.ttf") format("truetype");
+}
+
+/*============ Верхняя часть страницы ===============*/
+
+header {
+  background-image: url(image/bg_3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 19.8697%;
+  position: relative;
+}
+.banner_top {
+  width: 80%;
+  height: 98.6%;
+  /*background: red;*/
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+.banner_items {
+  display: flex;
+}
+.logo {
+  font-family: "MrsEaves";
+  font-size: 120px;
+  margin: 12% 0 0 17%;
+  color: #B6B9BA;
+  font-style: italic;
+}
+.icon {
+  /*background: yellow;*/
+  position: relative;
+}
+ .icon img {
+   display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: -15%;
+    right: 5%;
+}
+.link_group {
+  width: 100%;
+  display: flex;
+}
+.link_group a {
+  text-decoration: none;
+  color: #B6B9BA;
+  font-size: 22px;
+  font-family: "SegoeWP";
+}
+.link_group a+a {
+  margin-left: 10%;
+}
+.slogan {
+  justify-content: flex-end;
+}
+.slogan_block {
+  width: 340px;
+  height: 180px;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+}
+.slogan_block p:first-child {
+  font-size: 65px;
+  font-family: "SegoeWP";
+  color: white;
+}
+.slogan_block p+p {
+  font-size: 40px;
+  font-family: "SegoeWP";
+  margin-top: -15px;
+  color: white;
+}
+.slogan_block button {
+  font-family: "SegoeWP";
+  font-size: 22px;
+  padding: 0 25px;
+  margin-top: auto;
+  width: 145px;
+  background: #1D6343;
+  color: #B6B9BA;
+  border: 2px solid #272B29;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.slogan_block button:hover {
+  background: #1ca812;
+  border-color: white;
+  transition: 0.5s;
+}
+.slogan_block button:focus {
+  outline: none;
+  background: #FECC27;
+  color: black;
+  border-color: white;
+}
+
+/*============ Основной контент =============*/
+main {
+  width: 80%;
+  height: 1570px;
+  margin: 0 auto 0 auto;
+}
+.websites_adaptive {
+  display: none;
+}
+.websites {
+  margin-top: 65px;
+  width: 100%;
+  height: 1088px;
+  display: flex;
+}
+.form_radio_websites {
+  width: 25%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.form_radio_websites input[type=radio] {
+  display: none;
+}
+.form_radio_websites label {
+  width: 100%;
+  height: 302px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 -1px 3px 0.5px rgba(0, 0, 0, 0);
+}
+.form_radio_websites label img {
+  margin: 25px auto;
+  width: 135px;
+  height: 154px;
+}
+.form_radio_websites h1, h2 {
+  font-family: "SegoeWP";
+  text-align: center;
+  font-size: 26px;
+}
+.form_radio_websites h2 {
+  font-size: 22px;
+}
+.form_radio_websites input[type=radio]:checked+label {
+  box-shadow: 0 -1px 3px 0.5px rgba(0, 0, 0, 1);
+  border-radius: 4px 4px 0 0;
+  font-weight: bolder;
+  z-index: 100;
+  transition: box-shadow 1s;
+}
+.form_radio_websites input[type=radio]:checked+label::after {
+  content: "";
+  width: 99.9%;
+  height: 15px;
+  background: white;
+  position: absolute;
+  top: 98%;
+  left: 0.2%;
+  z-index: 100;
+}
+.content_websites {
+  width: 400%;
+  height: calc(100% - 302px);
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 302px;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, 0);
+}
+.form_radio_websites input[type=radio]:checked+label+.content_websites {
+  box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, 1);
+  transition: 1s;
+}
+.content_websites img {
+  margin-top: 60px;
+  width: 713px;
+  height: 339px;
+}
+.content_websites h1 {
+  font-family: "SegoeWP";
+  font-size: 38px;
+  margin-top: 65px;
+}
+.content_websites p {
+  margin: 38px 75px 0 58px;
+  font-family: "Univers";
+  font-size: 14px;
+  line-height: 28px;
+}
+.form_radio_websites:nth-child(2) .content_websites {
+  left: -100%;
+}
+.form_radio_websites:nth-child(3) .content_websites {
+  left: -200%;
+}
+.form_radio_websites:nth-child(4) .content_websites {
+  left: -300%;
+}
+.form_radio_websites input[type=radio]:checked+label+.content_websites {
+  opacity: 1;
+  transition: 1s;
+}
+
+/*================ Скриншот ================*/
+.screenshot {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 415px;
+}
+.screenshot_item {
+  width: 50%;
+}
+.left img {
+  max-width: 88.5%;
+  margin: 20px 0 0 -17px;
+}
+.right {
+  font-family: "SegoeWP";
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+.right h2 {
+  text-align: left;
+  font-size: 200%;
+  margin-top: 8%;
+}
+.right ul {
+  list-style: none;
+  margin-top: 30px;
+}
+.right ul li {
+  background-image: url("image/li.png");
+  background-repeat: no-repeat;
+  padding-left: 10%;
+  background-position: 0 75%;
+  background-size: 1.1vw 1.1vw;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.right ul li+li {
+  margin-top: 2%;
+}
+
+
+/*==========Ввод логина/пароля и e-mail=============*/
+
+
+.register, .register_item {
+  display: flex;
+  align-items: center;
+}
+.register {
+  width: 80%;
+  height: 170px;
+  justify-content: space-between;
+  margin: -65px auto 0 auto;
+}
+.register_item {
+  width: 45.9%;
+  height: 110px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: "SegoeWP";
+}
+.register_item p, form {
+  width: 100%;
+  margin-left: 5.3%;
+}
+.register_item p {
+  height: 25.45%;
+  font-size: 24px;
+  color: white;
+}
+.register_item form {
+  height: 41.8%;
+  font-size: 1.1vw;
+}
+.register_item input:not([type=submit]) {
+  width: 32%;
+  height: 57.44%;
+  background: #E8E8E8;
+  border: none;
+  padding-left: 2%;
+}
+.register_item input:not([type=submit])::placeholder {
+  color: #5D5D5D;
+}
+.register_item input:not([type=submit]):focus::placeholder {
+  color: transparent;
+}
+.register_item input:focus {
+  outline: none;
+}
+.login form {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.login {
+  background: #E67624;
+}
+.email {
+  background: #01D4F3;
+}
+.login input[type=submit] {
+  padding: 1.2% 2%;
+  color: white;
+  border: none;
+  background: #444444;
+  height: 57.7%;
+}
+.email input[type=email] {
+  width: 56.8%;
+}
+.email input[type=submit] {
+  margin-left: 10.6%;
+  padding: 1% 2%;
+  color: white;
+  border: none;
+  background: #029BB1;
+}
+
+/*=========== Footer =============*/
+
+footer {
+  height: 245px;
+  width: 100%;
+  background: #242926;
+  margin: 0 auto;
+  font-family: "SegoeWP";
+}
+.footer_wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.75fr 1.25fr;
+  grid-template-rows: 1fr;
+}
+.about p, .about ul {
+  margin: 35px 0 0 22%;
+}
+.about p, .testimoanials p {
+  font-size: 22px;
+  color: white;
+}
+.about ul {
+  list-style: none;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #ABABAB;
+}
+.about li+li {
+  margin-top: 4.08%;
+}
+.testimoanials p {
+  margin: 35px 0 0 11%;
+}
+.testimoanials p+p {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #ABABAB;
+}
+.testimoanials p+p+p {
+  margin-top: 3.25%;
+  font-size: 12px;
+  color: white;
+}
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.footer_logo p {
+  font-size: 90px;
+  font-family: "MrsEaves";
+  font-style: italic;
+  color: #6F6F6D;
+  margin-left: 22%;
+}
+.footer_logo p+p {
+  font-size: 12px;
+  color: white;
+  font-family: "SegoeWP";
+  font-style: normal;
+}
+
+/*==========  Медиа запросы ===========*/
+
+@media (max-width: 1440px) {
+  body {
+    background: none;
+  }
+  .right ul li {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1024px) {
+  main {
+    width: 97%;
+  }
+  .wrapper {
+    height: 2389px;
+  }
+  .slogan_block {
+    margin-left: 5%;
+  }
+  .icon img {
+    width: 80%;
+    left: 10%;
+    top: -10%;
+  }
+  .register {
+    margin-top: -140px;
+  }
+  .register_item p {
+    font-size: 2.3vw;
+  }
+  .right ul li {
+    padding-left: 5%;
+    font-size: 11px;
+  }
+}
+@media (max-width:934px) {
+  .wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .banner_top {
+    width: 100%;
+    grid-template-columns: 55% 45%;
+  }
+  .logo {
+    margin-top: 0;
+    font-size: 15vw;
+  }
+  .icon img {
+    width: 50%;
+    top: -5%;
+    left: 20%;
+  }
+  .link_group a {
+    font-size: 2vw;
+  }
+  .slogan_block {
+    width: 100%;
+    margin-top: -10%;
+    margin-left: -10%;
+  }
+  .slogan_block p:first-child {
+    font-size: 6vw;
+  }
+  .slogan_block p+p {
+    font-size: 4vw;
+    margin-top: -5%;
+  }
+  .slogan_block button {
+    margin-top: 5%;
+  }
+  .right ul li {
+    font-size: 10px;
+  }
+  main {
+    height: auto;
+    width: 100%;
+    margin-top: -2vh;
+  }
+  .websites {
+    display: none;
+  }
+  .websites_adaptive {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 15vw;
+  }
+  .websites_item {
+    width: 100%;
+  }
+  .websites_item summary {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .websites_item summary img {
+    margin-left: 10%;
+    width: 1vw;
+    min-width: 20%;
+  }
+  .websites_item summary h1 {
+    font-size: 4vw;
+    font-family: "SegoeWP";
+    margin-left: 10%;
+  }
+  .websites_adaptive .websites_item>img {
+    width: 100%;
+    max-width: 934px;
+  }
+  .websites_adaptive .websites_item>h1 {
+    margin: 2vh 4vw;
+  }
+  .websites_adaptive .websites_item>p {
+    font-size: 3vw;
+    margin: 0 4vw;
+  }
+  .number_1 summary {
+    background: #6598E6;
+  }
+  .number_2 summary {
+    background: #FDCF0A;
+  }
+  .number_1>img, .number_2>img, .number_4>img {
+    margin-top: 2vh;
+  }
+  .number_3 summary {
+    background: #12B367;
+  }
+  .number_4 summary {
+    background: #E67624;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .email input[type=submit] {
+    margin-left: 5%;
+  }
+}
+@media (max-width:841px) {
+  .screenshot {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .screenshot_item {
+    width: 100%;
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    margin: 2vh 0 0 0;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .right h2 {
+    text-align: center;
+  }
+  .right ul li {
+    font-size: 2vw;
+    background-size: 2vw 2vw;
+  }
+  .register {
+    margin: 2vh 0 0 0;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .register_item {
+    width: 85%;
+  }
+  .register_item>p {
+    font-size: 4vw;
+  }
+  .email {
+    margin-top: 2vh;
+  }
+}
+@media (max-width:639px) {
+  .icon img {
+    position: relative;
+    bottom: 5vw;
+    left: 0;
+  }
+}
+@media (max-width:489px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    margin: 0;
+  }
+  .websites_adaptive {
+    margin-top: 0;
+  }
+}
+@media (max-width: 449px) {
+  .register_item {
+    height: auto;
+  }
+  .register_item p {
+    font-size: 5.5vw;
+  }
+  .register_item form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 65%;
+    width: 90%;
+  }
+  .register_item form input:not([type=submit]) {
+    height: 3vh;
+    margin-top: 1vh;
+    width: 75%;
+  }
+  .register_item form input[type=submit] {
+    margin: 1vh 0;
+  }
+}
