@@ -540,7 +540,7 @@ footer {
   }
   .websites_adaptive .websites_item>p {
     font-size: 3vw;
-    margin: 0 4vw;
+    margin: 0 4vw 2vh 4vw;
   }
   .number_1 summary {
     background: #6598E6;
@@ -559,6 +559,9 @@ footer {
   }
   summary::-webkit-details-marker {
     display: none;
+  }
+  summary:focus {
+    outline: none;
   }
   .email input[type=submit] {
     margin-left: 5%;
@@ -591,7 +594,7 @@ footer {
     background-size: 2vw 2vw;
   }
   .register {
-    margin: 2vh 0 0 0;
+    margin: 2vh 0;
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -604,6 +607,45 @@ footer {
   }
   .email {
     margin-top: 2vh;
+  }
+  .footer_wrapper {
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas: "About_1 About_1 Logo"
+                         "About_2 About_2 Logo"
+                         "Testi Testi Testi";
+  }
+  #About_1 {
+    grid-area: About_1;
+  }
+  #About_2 {
+    grid-area: About_2
+  }
+  .footer_logo {
+    grid-area: Logo;
+  }
+  .testimoanials {
+    grid-area: Testi;
+  }
+  .footer_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer_item ul {
+    display: flex;
+  }
+  .footer_item p, .footer_item ul {
+    margin: 0;
+  }
+  .about li+li {
+    margin-top: 0;
+  }
+  .testimoanials p+p, .testimoanials p+p+p {
+    margin-top: 0;
+  }
+  .testimoanials p:last-child>br {
+    display: none;
   }
 }
 @media (max-width:639px) {
@@ -626,6 +668,9 @@ footer {
   }
 }
 @media (max-width: 449px) {
+  header {
+    background-repeat: repeat-y;
+  }jailer30888666
   .register_item {
     height: auto;
   }
