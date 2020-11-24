@@ -328,7 +328,7 @@ main {
 .register_item input:focus {
   outline: none;
 }
-.login form {
+.register_item form {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -355,6 +355,7 @@ main {
   color: white;
   border: none;
   background: #029BB1;
+  height: 57.7%;
 }
 
 /*=========== Footer =============*/
@@ -608,9 +609,14 @@ footer {
   .email {
     margin-top: 2vh;
   }
+  footer {
+    height: auto;
+  }
   .footer_wrapper {
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(3, 33%);
+    width: 90%;
+    grid-row-gap: 1vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "About_1 About_1 Logo"
                          "About_2 About_2 Logo"
                          "Testi Testi Testi";
@@ -626,6 +632,7 @@ footer {
   }
   .testimoanials {
     grid-area: Testi;
+    margin-bottom: 1vh;
   }
   .footer_item {
     display: flex;
@@ -634,25 +641,53 @@ footer {
   }
   .footer_item ul {
     display: flex;
+    flex-wrap: wrap;
   }
   .footer_item p, .footer_item ul {
     margin: 0;
   }
+  .about p {
+    margin-left: 2%;
+    font-size: 2.3vw;
+  }
+  .about li {
+    margin-left: 2%;
+    font-size: 1.7vw;
+  }
   .about li+li {
     margin-top: 0;
   }
+  .testimoanials p {
+    margin-left: 1%;
+    font-size: 2.3vw;
+  }
   .testimoanials p+p, .testimoanials p+p+p {
     margin-top: 0;
+    font-size: 1.7vw;
   }
   .testimoanials p:last-child>br {
     display: none;
   }
+  .footer_logo p {
+    margin-left: 0;
+  }
+  .footer_logo p:first-child {
+    align-self: center;
+    font-size: 11vw;
+  }
+  .footer_logo p+p {
+    font-size: 1.5vw;
+    margin-left: 8%;
+  }
 }
 @media (max-width:639px) {
+  header {
+    height: 18vh;
+  }
   .icon img {
     position: relative;
-    bottom: 5vw;
-    left: 0;
+    bottom: 6.5vw;
+    left: 10vw;
   }
 }
 @media (max-width:489px) {
@@ -660,8 +695,8 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  main {
-    margin: 0;
+  .icon img {
+    width: 35%;
   }
   .websites_adaptive {
     margin-top: 0;
@@ -670,7 +705,7 @@ footer {
 @media (max-width: 449px) {
   header {
     background-repeat: repeat-y;
-  }jailer30888666
+  }
   .register_item {
     height: auto;
   }
