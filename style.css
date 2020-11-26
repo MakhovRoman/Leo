@@ -74,6 +74,7 @@ header {
   color: #B6B9BA;
   font-size: 22px;
   font-family: "SegoeWP";
+  height: 2vh;
 }
 .link_group a+a {
   margin-left: 10%;
@@ -502,7 +503,7 @@ footer {
   main {
     height: auto;
     width: 100%;
-    margin-top: -2vh;
+    margin-top: -5%;
   }
   .websites {
     display: none;
@@ -682,12 +683,17 @@ footer {
 }
 @media (max-width:639px) {
   header {
-    height: 18vh;
+    height: 23vh;
+  }
+  .logo  p {
+    font-size: 15vw;
+    margin-top: -1vh;
   }
   .icon img {
     position: relative;
-    bottom: 6.5vw;
+    top: 2.5vw;
     left: 10vw;
+    width: 35%;
   }
 }
 @media (max-width:489px) {
@@ -695,8 +701,25 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  header {
+    height: 18vh;
+  }
+  .logo  p {
+    font-size: 12vw;
+    margin-top: 0;
+  }
   .icon img {
-    width: 35%;
+    top: -10%;
+    left: 20%;
+    width: 30%;
+  }
+  .slogan_block button {
+    width: 100px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  main {
+    margin-top: 0;
   }
   .websites_adaptive {
     margin-top: 0;
@@ -726,5 +749,18 @@ footer {
   }
   .register_item form input[type=submit] {
     margin: 1vh 0;
+  }
+}
+@media (max-width: 370px) {
+  header {
+    height: 18vh;
+  }
+  .slogan_block {
+    margin-top: -4vh;
+  }
+  .slogan_block button {
+    width: 25vw;
+    font-size: 4vw;
+    padding: 0 3vw;
   }
 }
