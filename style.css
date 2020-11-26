@@ -568,6 +568,10 @@ footer {
   .email input[type=submit] {
     margin-left: 5%;
   }
+  .screenshot {
+    width: 98%;
+    margin: 0 auto;
+  }
 }
 @media (max-width:841px) {
   .screenshot {
