@@ -72,12 +72,17 @@ header {
 .link_group a {
   text-decoration: none;
   color: #B6B9BA;
+  transition: color 0.5s;
   font-size: 22px;
   font-family: "SegoeWP";
   height: 2vh;
 }
 .link_group a+a {
   margin-left: 10%;
+}
+.link_group a:hover {
+  color: #ffe14c;
+  transition: color 0.5s;
 }
 .slogan {
   justify-content: flex-end;
@@ -358,6 +363,17 @@ main {
   background: #029BB1;
   height: 57.7%;
 }
+.register_item input[type=submit] {
+  transition: background 0.5s;
+}
+.register_item input[type=submit]:hover {
+  background: #ffe14c;
+  color: black;
+  transition: background 0.5s;
+}
+.register_item input[type=submit]:active {
+  background: white;
+}
 
 /*=========== Footer =============*/
 
@@ -383,14 +399,21 @@ footer {
   font-size: 22px;
   color: white;
 }
+.about li a {
+  text-decoration: none;
+  color: #ABABAB;
+}
 .about ul {
   list-style: none;
   margin-top: 15px;
   font-size: 12px;
-  color: #ABABAB;
+
 }
 .about li+li {
   margin-top: 4.08%;
+}
+.about li a {
+  text-decoration: none;
 }
 .testimoanials p {
   margin: 35px 0 0 11%;
