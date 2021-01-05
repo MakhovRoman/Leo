@@ -116,6 +116,7 @@ header {
   border: 2px solid #272B29;
   box-sizing: border-box;
   transition: 0.5s;
+  cursor: pointer;
 }
 .slogan_block button:hover {
   background: #1ca812;
@@ -163,6 +164,7 @@ main {
   align-items: center;
   position: relative;
   box-shadow: 0 -1px 3px 0.5px rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 .form_radio_websites label img {
   margin: 25px auto;
@@ -365,6 +367,7 @@ main {
 }
 .register_item input[type=submit] {
   transition: background 0.5s;
+  cursor: pointer;
 }
 .register_item input[type=submit]:hover {
   background: #ffe14c;
